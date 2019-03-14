@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class Client {
 	public static void main(String[] args) throws RemoteException, NotBoundException, FileNotFoundException {
-		Registry reg = LocateRegistry.getRegistry(args[1], Integer.parseInt(args[2]));
+		Registry reg = LocateRegistry.getRegistry(args[2], Integer.parseInt(args[3]));
 
 		ServiceTexte tt = (ServiceTexte) reg.lookup("Phrases");
 
@@ -27,7 +27,7 @@ public class Client {
 		for(int i=0;i<lpx.size(); i++)
 		{
 			System.out.println(lpx.get(i).toString());
-			System.out.println("Noeud:"+lpx.get(i) + " s'est connecter");
+			
 			
 		}
 }
