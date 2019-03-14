@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class Client {
 	public static void main(String[] args) throws RemoteException, NotBoundException, FileNotFoundException {
-		Registry reg = LocateRegistry.getRegistry("localhost");
+		Registry reg = LocateRegistry.getRegistry(args[1], Integer.parseInt(args[2]));
 
 		ServiceTexte tt = (ServiceTexte) reg.lookup("Phrases");
 
